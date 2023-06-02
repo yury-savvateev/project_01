@@ -7,7 +7,7 @@ my_favorite_songs = 'Waste a Moment, Staying\' Alive, A Sorta Fairytale, Start M
 # Выведите на консоль с помощью индексации строки, последовательно: первый трек, последний, второй, второй с конца
 # Нельзя переопределять my_favorite_songs и запятая не должна выводиться.
 
-
+print("Вариант кода с использованием индексации:\n")
 # the first track
 track_name = my_favorite_songs[:my_favorite_songs.find(',')]
 print(track_name)
@@ -28,4 +28,23 @@ number_start_character = my_favorite_songs_backwards.find(',') + 1
 number_end_character = my_favorite_songs_backwards.find(',',number_start_character) - 1
 track_name = my_favorite_songs_backwards[number_start_character:number_end_character]
 track_name = track_name[::-1]
+print(track_name)
+
+
+#Вариант с использованием split()
+print("\nВариант кода с использованием split():\n")
+# the first track
+track_name = my_favorite_songs.split(', ')[0]
+print(track_name)
+
+# the last track
+track_name = my_favorite_songs.split(', ')[-1]
+print(track_name)
+
+# the second track
+track_name = my_favorite_songs.split(', ')[1]
+print(track_name)
+
+# track the second from the end
+track_name = my_favorite_songs.split(', ')[-2]
 print(track_name)
