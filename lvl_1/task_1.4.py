@@ -29,3 +29,16 @@ store = {
 # "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
 
 # Пример: "Кроссовки тип 3 (Adidas) - 31 шт, стоимость 50747 руб"
+
+sum_quant = 0 # общее количество товара
+sum_price = 0 # общая стоимость товара
+for name_of_product, code_product in titles.items(): # перебираем наименования и коды из словаря titles{}
+    for list_of_dict in store[code_product]: # перебираем список словарей из словаря store{} для текущего товара с кодом code_product
+        sum_quant = sum_quant + list_of_dict['quantity'] # подсчет количества товаров текущего наименования
+        sum_price = sum_price + list_of_dict['price'] # подсчет общей суммы товаров текущего наименования
+    print(f'{name_of_product} - {sum_quant} шт, стоимость {sum_price} руб')
+    sum_quant = 0 # обнуляем количество для подсчета следующего товара
+    sum_price = 0 # обнуляем общую стоимость подсчета следующего товара
+
+
+    
