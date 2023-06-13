@@ -1,0 +1,17 @@
+-- database: c:\Users\uras\envs\host03\project_host03\lvl_4\teatchers.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM "Teatcher";
+CREATE TABLE Students ( 
+     School_Id INTEGER NOT NULL PRIMARY KEY, 
+     Student_Name TEXT NOT NULL, 
+     Student_Id INTEGER NOT NULL
+)
+
+/* # Наполните таблицу следующими данными:
+
+# 201, Иван, 1
+# 202, Петр, 2
+# 203, Анастасия, 3
+# 204, Игорь, 4 */
