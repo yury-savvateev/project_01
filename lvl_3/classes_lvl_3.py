@@ -20,3 +20,15 @@ class My_matrix:
 
     def get_num_cols(self):
         return self.num_cols
+
+    def add_empty_rows(self, quantity_empty_rows): # добавим заданное количество пустых строк к матрице
+        pass
+
+    def add_empty_cols(self, quantity_empty_cols): # добавим заданное количество пустых колонок к матрице
+        pass
+
+    def add_value_with_creation_of_new_area(self, row, col, value): # увеличим матрицу до заданной области и добавим заданное значение
+        pass
+
+    
+

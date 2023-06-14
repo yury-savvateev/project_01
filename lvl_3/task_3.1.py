@@ -27,12 +27,13 @@
 #   - проявите фантазию :)
 
 from classes_lvl_3 import My_matrix
-col = 10
-col = input('Введите количество колонок: ')
+#col = 10
+col = int(input('Введите количество колонок: '))
+row = int(input('Введите количество строк: '))
 # вызываем функции из класса
-matrix = My_matrix(10, 3) # создаем матрицу 10х10
+matrix = My_matrix(row, col) # создаем матрицу row х col со значениями NULL
 matrix.set_value(2, 2, 1) # запишем значение 1 в позицию колонка 3 строка 3
 print(matrix.get_num_rows()) # выводим число строк
 print(matrix.get_num_cols()) # выводим число колонок
-print(matrix.replace_value(2,2,256)) # заменим знаение в колонке 1 строка 1 на значение 256
+print(matrix.replace_value(2,2,256)) # заменим знаxение в колонке 1 строка 1 на значение 256
 print(matrix.data) # выведем матрицу
