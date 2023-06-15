@@ -25,15 +25,23 @@
 #   - отображать в таблице/матрице название колонки не обязательно!
 #   - использовать готовые классы numpy.array() и pandas.DataFrame() запрещено!
 #   - проявите фантазию :)
+def input_function():
+    print('Для выхода из программы нажмите "q" или "Ctrl+C"')
+    try:
+        col = int(input('Введите количество колонок: '))
+        row = int(input('Введите количество строк: '))
+        result = (row, col)
+    except:
+        result = False
+    return result
 
 from classes_lvl_3 import My_matrix
-#col = 10
-col = int(input('Введите количество колонок: '))
-row = int(input('Введите количество строк: '))
-# вызываем функции из класса
-matrix = My_matrix(row, col) # создаем матрицу row х col со значениями NULL
-matrix.set_value(2, 2, 1) # запишем значение 1 в позицию колонка 3 строка 3
-print(matrix.get_num_rows()) # выводим число строк
-print(matrix.get_num_cols()) # выводим число колонок
-print(matrix.replace_value(2,2,256)) # заменим знаxение в колонке 1 строка 1 на значение 256
-print(matrix.data) # выведем матрицу
+input_result = input_function()
+if input_result != False:
+    # вызываем функции из класса
+    matrix = My_matrix(input_result[0], input_result[1]) # создаем матрицу row х col со значениями NULL
+    matrix.set_value(2, 2, 1) # запишем значение 1 в позицию колонка 3 строка 3
+    print(matrix.get_num_rows()) # выводим число строк
+    print(matrix.get_num_cols()) # выводим число колонок
+    print(matrix.replace_value(2,2,256)) # заменим знаxение в колонке 1 строка 1 на значение 256
+    print(matrix.data) # выведем матрицу
