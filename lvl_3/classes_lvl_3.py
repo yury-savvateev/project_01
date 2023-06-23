@@ -140,14 +140,11 @@ class My_matrix:
 
     # Заменим старые значения в матрице на новые значения
     def replace_value(self, old_new_value):
-        for row in range(self.num_rows):
-            for col in self.data[row]:
-                try:
-                    index_in_new_value = old_new_value[0].index(col)
-                    index_in_matrix = row.index(col)
-                    self.data[row][index_in_matrix] = old_new_value[1][index_in_new_value]
-                except:
-                    pass
+        for sublist in self.data:
+            for i in range(len(sublist)):
+                if sublist[i] in old_new_value[0]:
+                    index = old_new_value[0].index(sublist[i])
+                    sublist[i] = old_new_value[1][index]
         return True
  
 
